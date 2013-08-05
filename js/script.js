@@ -5,6 +5,7 @@ $(document).ready(function() {
 
 	//browser detection
 	var doc = document.documentElement;
-	doc.setAttribute('data-useragent', navigator.userAgent);	
-  
+	doc.setAttribute('data-useragent', navigator.userAgent);
+
+	
 }); // end doc.ready

@@ -1,4 +1,4 @@
-// ================================ !DEBUG */
+// ================================ !DEBUG
 /*
     Enable this stylesheet to visually detect any improperly nested or
     potentially invalid markup, or any potentially inaccessible code.
@@ -20,7 +20,7 @@
 
 /* Are there any empty elements in your page? */
 :empty {
-    @extend .warn;
+    .warn;
 }
 
 
@@ -29,20 +29,20 @@
     double-checked, no alt is bad and is flagged red.
  */
 img {
-    @extend .alert;
+    .alert;
 }
 img[alt] {
     outline: none;
 }
 img[alt=""] {
-    @extend .warn;
+    .warn;
 }
 
 
 /* Double-check any links whose href is something questionable. */
 a[href="#"],
 a[href*="javascript"] {
-    @extend .warn;
+    .warn;
 }
 
 
@@ -50,26 +50,26 @@ a[href*="javascript"] {
 ul,
 ol {
     > *:not(li) {
-        @extend .alert;
+        .alert;
     }
 }
 
 
 /* tr as children of table ain’t great, did you need a thead/tbody? */
 table > tr {
-    @extend .warn;
+    .warn;
 }
 
 
 /* tfoot needs to come _before_ tbody. */
 tbody + tfoot {
-    @extend .warn;
+    .warn;
 }
 
 
 /* Forms require "action" attributes. */
 form {
-    @extend .alert;
+    .alert;
 }
 form[action]{
     outline: none;
@@ -83,7 +83,7 @@ form[action]{
  */
 textarea,
 input {
-    @extend .alert;
+    .alert;
 }
 input[type] {
     outline: none;
@@ -92,7 +92,7 @@ textarea[rows][cols] {
     outline: none;
 }
 input[type=submit] {
-    @extend .alert;
+    .alert;
 }
 input[type=submit][value] {
     outline: none;
@@ -101,11 +101,11 @@ input[type=submit][value] {
 
 /* Avoid inline styles where possible. */
 [style] {
-	@extend .warn;
+	.warn;
 }
 
 
 /* You should avoid using IDs for CSS, is this doing any styling? */
 [id] {
-	@extend .warn;
+	.warn;
 }

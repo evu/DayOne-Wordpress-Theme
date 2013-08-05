@@ -1,22 +1,16 @@
 /* ================================= !GRID */
 
 .grid {
-  max-width: @width;
+  max-width: @width + @space;
   margin: 0 auto;
   .cf;
   padding: 0 @space;
 }
-[class*='desk-'] {
+[class*='desk-'],
+[class*='tab-'],
+[class*='mob-'] {
 	float: left;
-	padding-right: @space;
-	.grid &:last-of-type {
-		padding-right: 0;
-	}
-	.transition(width .3s ease);
-}
-
-.push-r {
-	float: right;
+	padding: 0 @space/2;
 }
 
 /* Desktop Grid */

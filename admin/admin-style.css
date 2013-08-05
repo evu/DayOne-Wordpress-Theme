@@ -1,0 +1,236 @@
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+}
+body {
+  line-height: 1;
+  background: #ffffff;
+}
+blockquote {
+  quotes: none;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+a:hover,
+a:active {
+  outline: 0;
+}
+a:focus {
+  outline: thin dotted;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  vertical-align: middle;
+}
+html,
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  color: #222;
+  font-size: 100%;
+}
+label,
+button,
+input,
+select,
+textarea,
+option {
+  vertical-align: baseline;
+  *vertical-align: middle;
+  cursor: pointer;
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  *overflow: visible;
+}
+input[type="text"]:active,
+input[type="text"]:focus,
+textarea:active,
+textarea:focus {
+  cursor: text;
+}
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+[hidden] {
+  display: none;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: black;
+  padding: 0.2em 0;
+  text-align: center;
+}
+.chromeframe a {
+  color: #0000ff;
+}
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  a[href^="#"]:after {
+    content: "";
+  }
+  img {
+    max-width: 100% !important;
+  }
+}
+
+.btn {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  display: inline-block;
+  margin: 0;
+  line-height: 1;
+  padding: 0.5em;
+}
+.btn,
+.btn:hover {
+  text-decoration: none;
+}
+.btn-full {
+  display: block;
+  text-align: center;
+  padding-right: 0;
+  padding-left: 0;
+  width: 100%;
+}
+.textleft {
+  text-align: left;
+}
+.textright {
+  text-align: right;
+}
+.textcenter {
+  text-align: center;
+}
+.alignleft {
+  float: left;
+}
+img.alignleft {
+  margin: 0 20px 20px 0;
+}
+.alignright {
+  float: right;
+}
+img.alignright {
+  margin: 0 0 20px 20px;
+}
+.aligncenter {
+  margin: 0 auto 20px;
+}
+
+a {
+  color: #00e;
+  text-decoration: none;
+}
+body {
+  color: #4f4f4f;
+  font-family: Arial, sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+  font-family: Arial, sans-serif;
+  margin-bottom: 1.3em;
+  line-height: 1.2;
+}
+p {
+  line-height: 1.6;
+  margin-bottom: 1.5em;
+}
+ul,
+ol {
+  padding-left: 3em;
+  margin: 1.5em 0;
+}
+ul li,
+ol li {
+  margin: 1em 0;
+}

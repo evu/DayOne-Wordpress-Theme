@@ -1,0 +1,94 @@
+/* ================================ !TYPE & SELECTION */
+
+a { color: #00e;
+	text-decoration: none;
+	&:hover,
+	&:focus {
+		color: #06e;
+	}
+	&:active {
+		-webkit-transform: translate(0px, 1px);
+		-moz-transform: translate(0px, 1px);
+		-o-transform: translate(0px, 1px);
+		-ms-transform: translate(0px, 1px);
+		transform: translate(0px, 1px);
+	}
+}
+
+::-moz-selection { background: #06e; color: #fff; text-shadow: none }
+::selection { background: #06e; color: #fff; text-shadow: none }
+
+
+body {
+	color: @body;
+	font-family: @copy;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+	font-family: @headings;
+	margin-bottom: 1.3em;
+	line-height: 1.2;
+}
+h1,
+.h1 {
+
+}
+h2,
+.h2 {
+
+}
+h3,
+.h3 {
+
+}
+h4,
+.h4 {
+
+}
+
+p {
+	line-height: 1.6;
+	margin-bottom: 1.5em;
+
+	&.lead,
+	.post > &:first-of-type {
+		font-size: 120%;
+	}
+}
+
+blockquote {
+	font-style: italic;
+	padding: @space;
+	background: #eee;
+	margin-bottom: 1.5em;
+
+	> p {
+		margin-bottom: 0;
+	}
+}
+
+ul,
+ol {
+	padding-left: @space*2;
+	margin: 1.5em 0;
+	list-style-position: inside;
+	
+	li {
+		margin: 1em 0;
+	}
+}
+
+.wp-caption {
+    max-width: 100% !important;
+    margin-bottom: @space;
+
+    > a {
+        display: block;
+    }
+}
+.wp-caption-text {
+    text-align: center;
+    font-size: 80%;
+    margin: .5em 0;
+}
