@@ -16,11 +16,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<?php if (is_search()) { ?>
+
 	<meta name="robots" content="noindex, nofollow" /> 
+	
 	<?php } ?>
 
 	<meta name="description" content="<?php bloginfo('description'); ?>">
-	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico">
@@ -35,29 +36,33 @@
 </head>
 
 <body <?php body_class(); ?>>
-	<!--[if lt IE 8]><p class="chromeframe">You are using an <strong>extremely outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience on the web.</p><![endif]-->
-	<section class="header-wrap">
-		<header role="banner" class="page-header grid">
-			<?php if (is_front_page()) { ?>
-				<h1 class="logo desk-1-3"><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
-			<?php } else { ?>
-				<h2 class="logo desk-1-3"><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h2>
-			<?php } ?>
+	
+	<!--[if lt IE 9]><p class="chromeframe">You are using an <strong>extremely outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience on the web.</p><![endif]-->
 
-			<nav class="main-nav desk-2-3">
-				<?php
-					$menu_options = array(
-						'theme_location'  => 'primary',
-						'menu'            => 'Main Navigation', 
-						'container'       => false, 
-						'echo'            => false,
-						'fallback_cb'     => 'wp_page_menu',
-						'items_wrap'      => '%3$s',
-						'depth'           => 0
-					);
-					echo strip_tags(wp_nav_menu($menu_options), '<a>');
-				?>
-			</nav>
+	<header role="banner" class="page-header grid">
+		<?php if (is_front_page()) { ?>
 
-		</header>
-	</section>
+		<h1 class="logo"><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
+		
+		<?php } else { ?>
+		
+		<h2 class="logo"><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h2>
+		
+		<?php } ?>
+
+		<nav class="main-nav desk-2-3">
+			<?php
+				$menu_options = array(
+					'theme_location'  => 'primary',
+					'menu'            => 'Main Navigation', 
+					'container'       => false, 
+					'echo'            => false,
+					'fallback_cb'     => 'wp_page_menu',
+					'items_wrap'      => '%3$s',
+					'depth'           => 0
+				);
+				echo strip_tags(wp_nav_menu($menu_options), '<a>');
+			?>
+		</nav>
+
+	</header>

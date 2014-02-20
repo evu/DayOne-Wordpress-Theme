@@ -1,8 +1,7 @@
 <?php get_header(); ?>
 
-<section class="page-wrap">
 	<div class="grid">
-		<main role="main" class="page-content">
+		<section role="main" class="page-content">
 
 			<h1>Not found</h1>
 		    <p>Sorry, but the page you were trying to view does not exist.</p>
@@ -11,15 +10,12 @@
 		      <li>a mistyped address</li>
 		      <li>an out-of-date link</li>
 		    </ul>
+		    <p><a href="/">Go back to homepage</a></p>
 
-		</main><?php //End .page-content ?>
+		</section><?php //End .page-content ?>
 
 		<?php get_sidebar(); ?>
+
 	</div>
-</section>
 
 <?php get_footer(); ?>
-	
-</body>
-
-</html>

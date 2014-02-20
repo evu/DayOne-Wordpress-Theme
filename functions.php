@@ -4,12 +4,12 @@
 	add_theme_support( 'automatic-feed-links' );
 	
 	// Load jQuery
-	function load_jq() {
+	function load_jQ() {
         wp_deregister_script('jquery');
         wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"), '', '', true);
         wp_enqueue_script('jquery');
     }    
-    add_action('wp_enqueue_scripts', 'load_jq');
+    add_action('wp_enqueue_scripts', 'load_jQ');
 
 	// Clean up the <head>
 	function tidy_head() {
@@ -40,7 +40,6 @@
     }
     add_action( 'init', 'register_main_nav_menu' );
 
-
     // Add Editor Styles
     add_editor_style('/admin/admin-style.css');
 
@@ -53,13 +52,18 @@
 
     // Lightbox
     function auto_lightbox($content) {
-           global $post;
-           $pattern ="/<a(.*?)href=('|\")(.*?).(bmp|gif|jpeg|jpg|png)('|\")(.*?)>/i";
-           $replacement = '<a$1href=$2$3.$4$5 rel="lightbox" title="'.$post->post_title.'"$6>';
-           $content = preg_replace($pattern, $replacement, $content);
-           return $content;
+       global $post;
+       $pattern ="/<a(.*?)href=('|\")(.*?).(bmp|gif|jpeg|jpg|png)('|\")(.*?)>/i";
+       $replacement = '<a$1href=$2$3.$4$5 rel="lightbox" title="'.$post->post_title.'"$6>';
+       $content = preg_replace($pattern, $replacement, $content);
+       return $content;
     }
     add_filter('the_content', 'auto_lightbox');
 
+    // If no more tag use excerpt
+    function excerpt_or_more(){
+        $ismore = @strpos( $post->post_content, '<!--more-->');
+        return ($ismore) ? the_content() : the_excerpt();
+    }
 
 ?>

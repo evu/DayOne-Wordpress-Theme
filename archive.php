@@ -1,8 +1,7 @@
 <?php get_header(); ?>
 
-<section class="page-wrap">
 	<div class="grid">
-		<main role="main" class="page-content">
+		<section role="main" class="page-content">
 
 			<?php if (have_posts()) : ?>
 
@@ -12,7 +11,7 @@
 					
 						<h1 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
 
-						<?php the_content(); ?>
+						<?php excerpt_or_more(); ?>
 
 					</article>
 
@@ -24,14 +23,9 @@
 
 			<?php endif; ?>
 
-		</main><?php //End .page-content ?>
+		</section><?php //End .page-content ?>
 
 		<?php get_sidebar(); ?>
 	</div>
-</section>
 
 <?php get_footer(); ?>
-	
-</body>
-
-</html>
