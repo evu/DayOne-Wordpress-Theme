@@ -1,33 +1,31 @@
 <?php get_header(); ?>
 
-	<div class="grid">
-		<section role="main" class="page-content desk-2-3">
+	<section role="main" class="page-content">
 
-			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-				<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
-					
-					<h1><?php the_title(); ?></h1>
-						
-					<?php the_content(); ?>
-
-					<?php wp_link_pages(array('before' => 'Pages: ', 'next_or_number' => 'number')); ?>
-						
-					<footer class="post-meta">
-						Tags: <?php the_tags( 'Tags: ', ', ', ''); ?>
-						Posted in: <?php the_category(', ') ?>
-						On: <?php the_date(); ?>
-					</footer>
-					
-				</article>
+			<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 				
-				<?php comments_template(); ?>
+				<h1><?php the_title(); ?></h1>
+					
+				<?php the_content(); ?>
 
-			<?php endwhile; endif; ?>
+				<?php wp_link_pages(array('before' => 'Pages: ', 'next_or_number' => 'number')); ?>
+					
+				<footer class="post-meta">
+					Tags: <?php the_tags( 'Tags: ', ', ', ''); ?>
+					Posted in: <?php the_category(', ') ?>
+					On: <?php the_date(); ?>
+				</footer>
+				
+			</article>
+			
+			<?php comments_template(); ?>
 
-		</section><?php //End .page-content ?>
+		<?php endwhile; endif; ?>
 
-		<?php get_sidebar(); ?>
-	</div>
+	</section><?php //End .page-content ?>
+
+	<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

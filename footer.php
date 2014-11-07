@@ -1,4 +1,4 @@
-<footer role="contentinfo" class="page-footer grid">
+<footer role="contentinfo" class="page-footer">
 	<small class="copyright">&copy;<?php echo date("Y"); echo " "; bloginfo('name'); ?></small>
 </footer>
 

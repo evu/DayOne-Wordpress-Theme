@@ -1,4 +1,4 @@
-<aside class="side-bar desk-1-3">
+<aside class="side-bar">
 
     <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Sidebar Widgets')) : else : ?>
     

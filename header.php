@@ -6,11 +6,10 @@
 <!--[if gt IE 9]><!--> <html class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
 
 <head>
-	<title><?php wp_title( '|', true, 'right' ); ?></title>
+	<title></title>
 
 	<meta charset="<?php bloginfo('charset'); ?>">
 	
-	<!-- Force latest IE & Chrome Frame -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,15 +20,15 @@
 	
 	<?php } ?>
 
-	<meta name="description" content="<?php bloginfo('description'); ?>">
+	<meta name="description" content="">
+
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico">
 	
-	<!-- CSS: screen, mobile & print are all in the same file -->
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
+	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/css/main.css">
 
-	<!--[if lt IE 9]><script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script><![endif]-->
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
 	<?php wp_head(); ?>
 	
@@ -42,15 +41,15 @@
 	<header role="banner" class="page-header grid">
 		<?php if (is_front_page()) { ?>
 
-		<h1 class="logo"><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
+		<h1 class="logo"><a href="/"><?php bloginfo('name'); ?></a></h1>
 		
 		<?php } else { ?>
 		
-		<h2 class="logo"><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h2>
+		<h2 class="logo"><a href="/"><?php bloginfo('name'); ?></a></h2>
 		
 		<?php } ?>
 
-		<nav class="main-nav desk-2-3">
+		<nav class="main-nav">
 			<?php
 				$menu_options = array(
 					'theme_location'  => 'primary',

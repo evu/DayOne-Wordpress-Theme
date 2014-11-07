@@ -1,31 +1,29 @@
 <?php get_header(); ?>
 
-	<div class="grid">
-		<section role="main" class="page-content">
+	<section role="main" class="page-content">
 
-			<?php if (have_posts()) : ?>
+		<?php if (have_posts()) : ?>
 
-				<?php while (have_posts()) : the_post(); ?>
+			<?php while (have_posts()) : the_post(); ?>
+			
+				<article <?php post_class() ?>>
 				
-					<article <?php post_class() ?>>
-					
-						<h1 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
+					<h1 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
 
-						<?php excerpt_or_more(); ?>
+					<?php excerpt_or_more(); ?>
 
-					</article>
+				</article>
 
-				<?php endwhile; ?>
+			<?php endwhile; ?>
 
-			<?php else : ?>
+		<?php else : ?>
 
-				<h2>Not Found</h2>
+			<h2>Not Found</h2>
 
-			<?php endif; ?>
+		<?php endif; ?>
 
-		</section><?php //End .page-content ?>
+	</section><?php //End .page-content ?>
 
-		<?php get_sidebar(); ?>
-	</div>
+	<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

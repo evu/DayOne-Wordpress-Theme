@@ -1,17 +1,15 @@
 /* ================================ !TYPE & SELECTION */
 
-a { color: #00e;
+a { 
+	color: #00e;
 	text-decoration: none;
+
 	&:hover,
 	&:focus {
 		color: #06e;
 	}
 	&:active {
-		-webkit-transform: translate(0px, 1px);
-		-moz-transform: translate(0px, 1px);
-		-o-transform: translate(0px, 1px);
-		-ms-transform: translate(0px, 1px);
-		transform: translate(0px, 1px);
+		transform: translateY(1px);
 	}
 }
 
@@ -25,7 +23,6 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	clear: both;
 	font-family: @headings;
 	margin-bottom: 1.3em;
 	line-height: 1.2;
@@ -50,16 +47,11 @@ h4,
 p {
 	line-height: 1.6;
 	margin-bottom: 1.5em;
-
-	&.lead,
-	.post > &:first-of-type {
-		font-size: 120%;
-	}
 }
 
 blockquote {
 	font-style: italic;
-	padding: @space;
+	padding: 20px;
 	background: #eee;
 	margin-bottom: 1.5em;
 
@@ -70,7 +62,7 @@ blockquote {
 
 ul,
 ol {
-	padding-left: @space*2;
+	padding-left: 40px;
 	margin: 1.5em 0;
 	list-style-position: inside;
 	
@@ -81,7 +73,7 @@ ol {
 
 .wp-caption {
     max-width: 100% !important;
-    margin-bottom: @space;
+    margin-bottom: 20px;
 
     > a {
         display: block;
