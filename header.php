@@ -39,15 +39,10 @@
 	<!--[if lt IE 9]><p class="chromeframe">You are using an <strong>extremely outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience on the web.</p><![endif]-->
 
 	<header role="banner" class="page-header grid">
-		<?php if (is_front_page()) { ?>
 
+		
 		<h1 class="logo"><a href="/"><?php bloginfo('name'); ?></a></h1>
-		
-		<?php } else { ?>
-		
-		<h2 class="logo"><a href="/"><?php bloginfo('name'); ?></a></h2>
-		
-		<?php } ?>
+
 
 		<nav class="main-nav">
 			<?php
