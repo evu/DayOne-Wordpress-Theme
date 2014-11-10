@@ -30,16 +30,6 @@ input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary { display: block; }
 
 
-.textleft {
-  text-align: left;
-}
-.textright {
-  text-align: right;
-}
-.textcenter {
-  text-align: center;
-}
-
 
 .alignleft {
   float: left;
@@ -75,9 +65,7 @@ h3,
 h4,
 h5,
 h6 {
-  clear: both;
-  font-family: Arial, sans-serif;
-  margin-bottom: 1.3em;
+  margin-bottom: 1.2em;
   line-height: 1.2;
 }
 p {
@@ -86,7 +74,7 @@ p {
 }
 ul,
 ol {
-  padding-left: 3em;
+  padding-left: 2em;
   margin: 1.5em 0;
 }
 ul li,
