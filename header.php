@@ -51,16 +51,17 @@
 
 		<nav class="main-nav">
 			<?php
-				$menu_options = array(
-					'theme_location'  => 'primary',
-					'menu'            => 'Main Navigation', 
-					'container'       => false, 
-					'echo'            => false,
+				$args = array(
+					'menu'            => 'Main Navigation',
+					'container'       => false,
+					'menu_class'      => 'menu',
+					'echo'            => true,
 					'fallback_cb'     => 'wp_page_menu',
-					'items_wrap'      => '%3$s',
+					'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
 					'depth'           => 0
 				);
-				echo strip_tags(wp_nav_menu($menu_options), '<a>');
+
+				wp_nav_menu( $args );
 			?>
 		</nav>
 
