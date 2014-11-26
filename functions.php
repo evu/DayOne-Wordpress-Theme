@@ -65,9 +65,6 @@
         global $submenu;
 
         if ( current_user_can( 'editor' ) ) {
-            remove_menu_page('tools.php');
-            remove_menu_page('profile.php');
-            // remove_menu_page('edit-comments.php');
 
             unset($submenu['themes.php'][5]);                           //Appearence -> Themes
             unset($submenu['themes.php'][6]);                           //Appearence -> Customise

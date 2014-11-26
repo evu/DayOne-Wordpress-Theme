@@ -21,10 +21,12 @@
 		<?php 
 
 		$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+		$args = array(
+		  'posts_per_page' => 3,
+		  'paged' => $paged
+		);
 
-		$args = array('paged' => $paged);
-
-		query_posts( $args );
+		query_posts($args); 
 
 		if (have_posts()) : while (have_posts()) : the_post(); ?>
 
