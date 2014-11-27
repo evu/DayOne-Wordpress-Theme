@@ -6,7 +6,7 @@ Template Name: Template Page
 
 get_header(); ?>
 
-	<section role="main" class="page-content">
+	<section role="main" class="page-content alignleft">
 
 		
 
@@ -20,7 +20,7 @@ get_header(); ?>
 				<h1><?php the_title(); ?></h1>
 
 
-				<?php excerpt_or_more(); ?>
+				<?php the_content(); ?>
 
 
 			</article>

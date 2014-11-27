@@ -46,8 +46,10 @@
     // Add RSS links to <head> section
     add_theme_support( 'automatic-feed-links' );
 
+    // Stop default adding image links in posts
+    update_option('image_default_link_type','none');
 
-
+    
 
 
     /* ================================ !ROLE CAPABILITIES */

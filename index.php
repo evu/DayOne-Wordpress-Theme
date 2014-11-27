@@ -11,7 +11,7 @@
 
 
 
-	<section role="main" class="page-content">
+	<section role="main" class="page-content alignleft">
 
 
 		<h1><?php echo $the_header; ?></h1>

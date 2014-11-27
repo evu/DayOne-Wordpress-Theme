@@ -1,4 +1,4 @@
-<aside class="sidebar">
+<aside class="sidebar alignright">
 
     <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Sidebar Widgets')) : else : ?>
     

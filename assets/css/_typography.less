@@ -1,20 +1,20 @@
 /* ================================ !TYPE & SELECTION */
 
 a { 
-	color: #00e;
+	color: @brand;
 	text-decoration: none;
 
 	&:hover,
 	&:focus {
-		color: #06e;
+		color: lighten(@brand, 10%);
 	}
 	&:active {
 		transform: translateY(1px);
 	}
 }
 
-::-moz-selection { background: #06e; color: #fff; text-shadow: none }
-::selection { background: #06e; color: #fff; text-shadow: none }
+::-moz-selection { background: @brand; color: #fff; text-shadow: none }
+::selection { background: @brand; color: #fff; text-shadow: none }
 
 
 body {

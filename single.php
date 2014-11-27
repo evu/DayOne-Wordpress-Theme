@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-	<section role="main" class="page-content">
+	<section role="main" class="page-content alignleft">
 	
 
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
